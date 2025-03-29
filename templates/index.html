@@ -1,0 +1,40 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bitcoin Network Metrics</title>
+    <style>
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        .chart { background: #f8f9fa; padding: 20px; margin: 20px 0; }
+        img { width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bitcoin Network Analysis</h1>
+        
+        <div class="chart">
+            <h3>Trade Activity</h3>
+            <img src="{{ chart1 }}" alt="">
+            <p>This graph shows how the trade volume (the total value of Bitcoin traded) compares to the transaction volume ratio (the number of Bitcoin transactions relative to total supply).</p>
+            <ol>
+                    <li>A high trade volume indicates strong market activity, showing how much Bitcoin is being traded daily.</li>
+                    <li>A high transaction volume ratio suggests that more Bitcoin is being used in transactions rather than just being held.</li>
+                    <li>If trade volume is high but transactions are low, people might be investing in Bitcoin rather than using it for purchases. If transactions are high, Bitcoin is being used more like a currency.</li>
+                </ol>
+        </div>
+
+        <div class="chart">
+            <h3>Network Security</h3>
+            <img src="{{ chart2 }}" alt="">
+            <p>This graph displays the total computational power securing the Bitcoin network, measured in terahashes per second (TH/s).
+                <ol>
+                    <li>Higher values indicate a more secure network.</li>
+                    <li>Lower values indicate a less secure network due to lower profitability.</li>
+                    <li>Sudden increases or drops in the hash rate can happen due to changes in Bitcoin’s price or how hard it is to mine new Bitcoins.</li>
+                </ol>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
